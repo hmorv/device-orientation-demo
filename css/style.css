@@ -1,0 +1,30 @@
+body {
+	font-size: 62.5%;
+	font-family: Arial;
+}
+
+h1 {
+	color: #343;
+	font-weight: bold;
+	font-size: 4rem;
+}
+.text-center {
+	text-align: center;
+}
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#output {
+	width: 80%;
+}
+
+.output-result-title {
+	color: blue;
+	font-size: 4rem;
+}
+.output-result-value {
+	color: red;
+	font-size: 4rem;
+}
