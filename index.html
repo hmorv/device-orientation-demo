@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Device Orientation demo</title>
+	<style>
+
+		body {
+			font-size: 62.5%;
+			font-family: Arial;
+		}
+
+		h1 {
+			color: #343;
+			font-weight: bold;
+			font-size: 4rem;
+		}
+		.text-center {
+			text-align: center;
+		}
+		.container {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		#output {
+			width: 80%;
+		}
+
+		.output-result-title {
+			color: blue;
+			font-size: 4rem;
+		}
+		.output-result-value {
+			color: red;
+			font-size: 4rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">device orientation demo</h1>
+
+		<div id="output">
+			<span class="output-result-title">Alpha: </span> <span class="output-result-value"></span><br>
+			<span class="output-result-title">Beta: </span>	 <span class="output-result-value"></span><br>
+			<span class="output-result-title">Gamma: </span> <span class="output-result-value"></span>
+		</div>
+
+	</div>
+	<script>
+
+		window.addEventListener("deviceorientation", function(event) {
+
+			var values = [
+				Math.round(event.alpha),
+				Math.round(event.beta),
+				Math.round(event.gamma)
+				];
+
+			//var output = document.querySelectorAll(".output-result-value");
+
+			document.querySelectorAll(".output-result-value")
+				.forEach(function(el, index) {
+					el.innerHTML = values[index];
+				});
+
+		}, true);
+
+	</script>
+</body>
+</html>
