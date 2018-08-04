@@ -1,4 +1,4 @@
-document.demo = (function() {
+window.demo = (function() {
 	'use strict';
 
 	window.addEventListener("deviceorientation", function(event) {
